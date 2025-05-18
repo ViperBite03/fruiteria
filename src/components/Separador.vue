@@ -8,8 +8,8 @@
     .content {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      padding: 0 450px;
+      justify-content: space-around;
+      padding: 0 250px;
       height: 100%;
       color: #f8da5b;
       font-size: 30px;
@@ -44,10 +44,7 @@
     </div>
 
     <div class="content">
-      <span>Desde sempre</span>
-      <span>Productes de qualitat</span>
-      <span>Amb el millor preu</span>
-      <span>Del mercat a casa teva</span>
+      <slot></slot>
     </div>
 
     <div class="close">

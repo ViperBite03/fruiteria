@@ -1,13 +1,16 @@
 <script lang="ts" setup></script>
 
 <style lang="scss" scoped>
-  #section-container {
+  #inicio {
     height: 100vh;
     background-color: #f9f8ee;
+
+    background-image: url('/src/assets/dark-bg.png');
 
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 75px;
     gap: 200px;
 
     img {
@@ -25,8 +28,8 @@
         line-height: 1;
       }
 
-      button {
-        font-family: 'Dongle', sans-serif;
+      .redirect {
+        transition: 0.3s ease;
         width: fit-content;
 
         border-radius: 100px;
@@ -35,19 +38,29 @@
 
         background-color: white;
         font-size: 25px;
+
+        &:hover {
+          background-color: #f8da5b;
+          color: white;
+        }
       }
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
     }
   }
 </style>
 
 <template>
-  <div id="section-container">
+  <div id="inicio">
     <div class="left">
       <p class="title">
         Disfruta de la millor<br />
         varietat de fruita, <br />del mercat a casa teva!
       </p>
-      <button>Ver nuestros productos</button>
+      <a class="redirect" href="#productos">Vine a visitar-nos!</a>
     </div>
 
     <img

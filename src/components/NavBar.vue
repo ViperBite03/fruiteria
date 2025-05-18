@@ -7,21 +7,22 @@
 
   const items: IMenuItem[] = [
     {
-      href: '#section-container',
-      title: 'Inicio',
+      href: '#inicio',
+      title: 'Inici',
     },
     {
-      href: '#stock-container',
-      title: 'Productos',
+      href: '#productos',
+      title: 'Productes',
     },
     {
-      href: '#stock-container',
-      title: 'Quienes somos',
+      href: '#nosotros',
+      title: 'En Joan',
+    },
+    {
+      href: '#contacto',
+      title: 'Contacte',
     },
   ]
-
-  import { ref } from 'vue'
-  const open = ref(false)
 </script>
 
 <style lang="scss" scoped>
@@ -54,7 +55,7 @@
         transition: 0.3s ease;
 
         &:hover {
-          background-color: #f8f398;
+          background-color: #f8da5b;
 
           a {
             color: black;
