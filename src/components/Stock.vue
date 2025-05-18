@@ -102,11 +102,11 @@
           align-items: center;
 
           .stock {
-            height: 40px;
-            width: 44px;
+            height: 35px;
+            width: 38px;
             border: 1px solid #f8da5b;
             border-radius: 100%;
-            padding-top: 4px;
+            padding-top: 3px;
 
             display: flex;
             align-items: center;
