@@ -5,7 +5,7 @@
     height: 100vh;
     background-color: #f9f8ee;
 
-    background-image: url('/src/assets/dark-bg.png');
+    background-image: url('public/dark-bg.png');
 
     display: flex;
     align-items: center;

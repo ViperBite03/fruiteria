@@ -49,7 +49,7 @@
     padding: 300px 500px 300px;
     background-color: #f9f8ee;
 
-    background-image: url('/src/assets/dark-bg.png');
+    background-image: url('public/dark-bg.png');
 
     display: flex;
     flex-direction: column;
@@ -125,7 +125,7 @@
     <div class="product-list">
       <div class="product" v-for="product in productList">
         <div class="product-image">
-          <img :src="`/src/assets/frutas/${product.name}.png`" alt="" />
+          <img :src="`public/frutas/${product.name}.png`" alt="" />
         </div>
         <div class="details">
           <span class="name">{{ product.name }}</span>
