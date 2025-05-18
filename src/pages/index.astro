@@ -3,15 +3,25 @@ import Portada from '../components/Portada.vue';
 import Separador from '../components/Separador.vue';
 import Stock from '../components/Stock.vue';
 import NavBar from '../components/NavBar.vue';
+import QuienesSomos from '../components/QuienesSomos.vue';
+import Footer from '../components/Footer.vue';
 import Layout from '../layouts/Layout.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
+<style lang="scss">
+	body {
+		font-family: 'Dongle', sans-serif;
+	}	
+</style>
+
 <Layout>
 	<NavBar />
 	<Portada />
 	<Separador />
 	<Stock />
+	<QuienesSomos />
+	<Footer />
 </Layout>

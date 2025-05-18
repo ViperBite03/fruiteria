@@ -10,16 +10,32 @@
     justify-content: center;
     gap: 200px;
 
-    .title {
-      font-size: 30px;
-    }
-
     img {
-      height: 500px;
+      height: 600px;
     }
 
-    button {
-      width: fit-content;
+    .left {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .title {
+        font-size: 60px;
+        margin: 0;
+        line-height: 1;
+      }
+
+      button {
+        font-family: 'Dongle', sans-serif;
+        width: fit-content;
+
+        border-radius: 100px;
+        border: none;
+        padding: 3px 20px 0px;
+
+        background-color: white;
+        font-size: 25px;
+      }
     }
   }
 </style>
@@ -27,8 +43,11 @@
 <template>
   <div id="section-container">
     <div class="left">
-      <p class="title">Disfruta de la millor varietat de fruita, <br />del mercat a casa teva!</p>
-      <button>asd</button>
+      <p class="title">
+        Disfruta de la millor<br />
+        varietat de fruita, <br />del mercat a casa teva!
+      </p>
+      <button>Ver nuestros productos</button>
     </div>
 
     <img

@@ -2,71 +2,51 @@
   interface IProduct {
     name: string
     stock: number
-    color: string
-    bgColor: string
   }
 
   const productList: IProduct[] = [
     {
       name: 'Manzanas',
       stock: 3,
-      color: '#B21820',
-      bgColor: '#d67c80',
     },
     {
       name: 'Peras',
       stock: 3,
-      color: 'red',
-      bgColor: 'blue',
     },
     {
       name: 'Platanos',
       stock: 3,
-      color: '#cc9b88',
-      bgColor: '#FEEB87',
     },
     {
       name: 'Naranjas',
       stock: 3,
-      color: 'red',
-      bgColor: 'blue',
     },
     {
       name: 'Uvas',
       stock: 3,
-      color: 'red',
-      bgColor: 'blue',
     },
     {
       name: 'Fresas',
       stock: 3,
-      color: '#db8181',
-      bgColor: '#fcbaba',
     },
     {
       name: 'Kiwis',
       stock: 3,
-      color: '#c2db69',
-      bgColor: '#E8E9B2',
     },
     {
       name: 'Mangos',
       stock: 3,
-      color: '#febb0b',
-      bgColor: '#ffe9b2',
     },
     {
       name: 'Maracuya',
       stock: 3,
-      color: '#ffc054',
-      bgColor: '#af7e82',
     },
   ]
 </script>
 
 <style lang="scss" scoped>
   #stock-container {
-    padding: 50px 500px;
+    padding: 300px 500px;
     background-color: #f9f8ee;
 
     display: flex;
@@ -75,7 +55,7 @@
     gap: 75px;
 
     .title {
-      font-size: 40px;
+      font-size: 50px;
     }
 
     .product-list {
@@ -93,21 +73,12 @@
         justify-content: space-around;
         align-items: center;
 
-        .circle {
-          position: relative;
+        background-color: white;
 
-          height: 150px;
-          border-radius: 100%;
-          aspect-ratio: 1;
-
-          display: flex;
-          justify-content: center;
-          align-items: center;
-
-          .product-image {
-            position: absolute;
-            width: 175px;
-          }
+        .product-image {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
         }
 
         .details {
@@ -128,11 +99,9 @@
     <h2 class="title">Mira el que tenim disponible!</h2>
 
     <div class="product-list">
-      <div class="product" v-for="product in productList" :style="{ 'background-color': product.bgColor }">
-        <div class="circle" :style="{ 'background-color': product.color }">
-          <img class="product-image" :src="`src/assets/${product.name}.png`" alt="" />
-        </div>
-        <div class="details" :style="{ color: product.color }">
+      <div class="product" v-for="product in productList">
+        <img class="product-image" :src="`src/assets/${product.name}.png`" alt="" />
+        <div class="details">
           <span class="name">{{ product.name }}</span>
           <span class="stock">{{ product.stock }}</span>
         </div>

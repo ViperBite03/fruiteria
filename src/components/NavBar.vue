@@ -7,12 +7,16 @@
 
   const items: IMenuItem[] = [
     {
-      href: '#stock-container',
-      title: 'Element 1',
+      href: '#section-container',
+      title: 'Inicio',
     },
     {
-      href: '#section-container',
-      title: 'Element 2',
+      href: '#stock-container',
+      title: 'Productos',
+    },
+    {
+      href: '#stock-container',
+      title: 'Quienes somos',
     },
   ]
 
@@ -32,27 +36,37 @@
     justify-content: center;
     padding: 50px;
 
+    font-size: 25px;
+
     .items {
       display: flex;
-      background-color: #f8f398;
+      background-color: white;
+      gap: 10px;
+      padding: 10px;
       border-radius: 100px;
 
       .item-group {
+        border-radius: 200px;
+        background-color: #f9f8ee;
         position: relative;
-        padding: 10px;
+        padding: 3px 15px 0px;
 
-        &:hover .dropdown {
-          display: flex;
-        }
+        transition: 0.3s ease;
 
-        .item {
-          color: var(--colorText);
+        &:hover {
+          background-color: #f8f398;
 
-          &:hover {
-            color: var(--colorBrand);
+          a {
+            color: black;
           }
         }
       }
+    }
+
+    a {
+      transition: 0.3s ease;
+      text-decoration: none;
+      color: rgb(143, 143, 143);
     }
   }
 </style>

@@ -3,22 +3,31 @@
 <style lang="scss" scoped>
   .section-container {
     position: relative;
-    background-color: white;
-    height: 200px;
+    height: 100px;
+
+    .content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 450px;
+      height: 100%;
+      color: #f8da5b;
+      font-size: 30px;
+    }
 
     .open {
       width: 100%;
       position: absolute;
-
-      top: -400px;
+      bottom: 0;
+      margin-bottom: 85px;
     }
 
     .close {
       width: 100%;
       position: absolute;
       transform: rotate(180deg);
-
-      bottom: -400px;
+      margin-top: 85px;
+      top: 0;
     }
   }
 </style>
@@ -33,6 +42,14 @@
         ></path>
       </svg>
     </div>
+
+    <div class="content">
+      <span>Desde sempre</span>
+      <span>Productes de qualitat</span>
+      <span>Amb el millor preu</span>
+      <span>Del mercat a casa teva</span>
+    </div>
+
     <div class="close">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
