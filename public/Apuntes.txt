@@ -1,0 +1,94 @@
+Evolucion sistemas operativos:
+- 1a generacion (1940-1950): No habian sistemas operativos. Los programas se cargaban manualmente.
+- 2a generacion (1950-1960): Se introducen los sitemas "batch" (procesamiento por lotes).
+- 3a generacion (1960-1980): Nacen los sistemas de tiempo compartido. Aparece UNIX. (familia de sistemas operativos).
+- 4a generacion (1980-2000): Llegan los Personal Computer. MS-DOS, Windows y Linux.
+- 5a generacion (2000-actualidad): Sistemas móviles (Android/iOS), la nube y multiprocessamiento.
+
+Funciones de un sistema operativo:
+- Gestion de procesos: Creación, finalitzación, planificación (CPU), multitarea.
+- Gestion de memoria: Asignación, protección, fragmentación, segmentación, paginación, memória virtual (swap).
+- Gestion de ficheros: Crear, leer, escribir, eliminar ficheros. Estructuras: raiz (/) y jerarquia.
+- Gestion de entrada/salida: Dispositivos físicos (disco), logicos (ficheros) y virtuales (pipes).
+- Gestion de seguridad: Usuarios, permisos, autenticación.
+
+Tipos de operativos i licencias:
+- Monousuario / multitarea / multiprocesador
+- Licencias:
+-- Libre: GLP, puede modificarse y redistribuirse.
+-- Propietario: Microsoft, Apple.
+-- Comercial: Software de pago.
+
+Virtualización:
+- Crear maquinas virtuales (ej. VirualBox).
+- Ventajas: Pruebas, entornos seguros, menos coste físico.
+
+
+---------------------- COMANDOS ----------------------
+
+Esenciales:
+- pwd: ruta actual.
+- ls, ls -l, ls -la: llistar fitxers.
+- cd, cd ..: moure’t entre carpetes.
+- cp, mv, rm: copiar, moure, eliminar.
+- touch: crear fitxer buit.
+- mkdir: crear directori.
+- man, --help, whatis, apropos: obtenir ajuda.
+- echo, cat, less, more: mostrar contingut.
+- history: veure comandes anteriors.
+
+Gestion de usuarios y permisos:
+- useradd: crea usuario.
+- passwd nomusuari: asigna contraseña.
+- usermod, userdel, groupadd, groupdel, chage: gestionar usuarios y grupos.
+- ficheros:
+-- /etc/passwd: info basica de los usuarios.
+-- /etc/shadow: contraseñas cifradas.
+-- /etc/group: gestion de grupos.
+
+Permisos:
+- Formato: -rwx, -r-x, -r--
+- Comandos: chmod 755 fichero, chown usuario fichero, chgrp grupo fichero
+
+Estructura Linux:
+- /bin: comandos basicos
+- /etc: configuración
+- /home: directorios usuarios
+- /root: home de root
+- /dev, /proc, /var, /tmp: dispositivos, procesos, logs, archivos temporales...
+
+Montaje de discos y backups:
+- Dispositivos: /dev/sda1, etc...
+- Montar: mount /dev/sdX /mount
+- Desmontar: unmount /mount
+- Crear sistema de ficheros: mkfs.ext4 /dev/sdX
+- Comprimir archivos: 
+-- tar -cvf backup.tar /carpeta
+-- tar -xvf backup.tar
+-- gzip, gunzip
+
+
+---------------------- PERMISOS EN LINUX ----------------------
+
+u (user): Propietario del fichero
+g (group): Grupo del fichero
+o (others): Resto de usuarios
+a (all): Todos los anteriores
+---
+r (read): ver el contenido
+w (write): modificar/eliminar
+x (execute): archivo ejecutable o acceso al directorio
+-[rwx][r-x][r--] => usuario, grupo, otros
+r = 4, w = 2, x = 1
+
+chmod: cambiar permisos, tambien puede ser con notacion numerica (de ahi el 755)
+- chmod [u, g, o, a] [+, -, =] [rwx] fichero
+
+chown: cambiar el Propietario
+- chown new_user fichero
+- chown new_user:new_group fichero
+
+chgrp: cambia el grupo asociado
+- chgrp alumnos informe.txt
+
+comprobar permisos: ls -l fichero.txt
