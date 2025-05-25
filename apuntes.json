@@ -1,0 +1,158 @@
+{
+  "examen_sistemas_operativos": {
+    "1_evolucion_so": {
+      "1_gen": "Años 40-50. Ordenadores sin sistema operativo. Todo se programaba manualmente.",
+      "2_gen": "Años 50-60. Aparecen los sistemas *batch* (por lotes), que ejecutan trabajos sin supervisión directa.",
+      "3_gen": "Años 60-80. Surge el tiempo compartido: varios usuarios usan el ordenador a la vez. Nace UNIX.",
+      "4_gen": "Años 80-2000. Aparecen los PCs, MS-DOS, Windows, Linux y las interfaces gráficas (GUI).",
+      "5_gen": "2000 hasta hoy. Sistemas modernos, móviles, servidores, virtualización y nube."
+    },
+    "2_funciones_so": {
+      "procesos": "El sistema operativo gestiona los programas en ejecución (procesos), asigna CPU, y permite multitarea.",
+      "memoria": "Controla la RAM, usa técnicas como paginación, memoria virtual y evita que un programa use la memoria de otro.",
+      "archivos": "Gestiona la forma en que se guardan, abren, leen y escriben los archivos.",
+      "io": "Controla dispositivos como teclado, pantalla, impresoras, etc.",
+      "seguridad": "Define qué puede hacer cada usuario y protege los datos.",
+      "interfaz": "Permite interactuar con el sistema: por texto (terminal) o gráficos (ventanas)."
+    },
+    "3_tipos_so": {
+      "uso": {
+        "monousuario": "Un solo usuario puede usar el sistema a la vez.",
+        "multiusuario": "Varios usuarios pueden usar el sistema al mismo tiempo (ej: Linux)."
+      },
+      "tareas": {
+        "monotarea": "Solo se puede ejecutar una tarea o programa a la vez.",
+        "multitarea": "Se pueden ejecutar varios programas a la vez. El SO reparte el tiempo de la CPU entre ellos."
+      },
+      "procesadores": {
+        "monoprocesador": "Solo usa un procesador para ejecutar tareas.",
+        "multiprocesador": "Puede usar varios procesadores a la vez, mejorando el rendimiento."
+      },
+      "otros": {
+        "en_red": "Diseñados para trabajar conectados en red (ej: servidores).",
+        "moviles": "SO para smartphones (Android, iOS).",
+        "embebidos": "Sistemas integrados en dispositivos como routers, coches, electrodomésticos."
+      }
+    },
+    "4_aplicaciones_licencias": {
+      "tipos": {
+        "escritorio": "Programas tradicionales (Word, Photoshop).",
+        "moviles": "Apps para móvil (WhatsApp, Spotify).",
+        "web": "Se usan desde el navegador (Google Docs, Gmail).",
+        "empresariales": "Para la gestión de empresas (ERP, CRM)."
+      },
+      "licencias": {
+        "libre": "Puedes ver, modificar y compartir el código (ej: Linux).",
+        "propietario": "Solo puedes usarlo bajo ciertas condiciones, sin modificar (ej: Windows).",
+        "comercial": "Depende de cómo se distribuye: gratis, por tiempo limitado, etc."
+      }
+    },
+    "5_virtualizacion": {
+      "descripcion": "Ejecutar varios sistemas operativos en la misma máquina física.",
+      "ventajas": [
+        "Ahorro de costes y recursos",
+        "Permite hacer pruebas sin afectar el sistema real",
+        "Mayor seguridad y aislamiento",
+        "Fácil de mover/copiar máquinas virtuales"
+      ]
+    },
+    "6_instalacion": {
+      "ubuntu": [
+        "Crear USB de arranque con Rufus o BalenaEtcher",
+        "Entrar en BIOS y arrancar desde USB",
+        "Seguir asistente gráfico para configurar idioma, red, etc.",
+        "Crear particiones manualmente o usar todo el disco",
+        "Instalar el gestor de arranque GRUB si se quiere dual boot"
+      ],
+      "windows": [
+        "Crear USB de instalación con Media Creation Tool",
+        "Iniciar desde USB en el arranque",
+        "Elegir disco y partición, formatear en NTFS",
+        "Seguir pasos del asistente hasta finalizar",
+        "Reiniciar, configurar usuario y preferencias"
+      ]
+    },
+    "7_linux_multiusuario": {
+      "kernel": "Parte central del sistema, controla hardware, memoria y procesos.",
+      "shell": "Intérprete de comandos. El usuario escribe órdenes que el sistema ejecuta.",
+      "estructura_archivos": "Todo está organizado en carpetas desde una raíz '/'."
+    },
+    "8_usuarios_grupos_permisos": {
+      "archivos_config": ["/etc/passwd", "/etc/shadow", "/etc/group"],
+      "comandos": {
+        "gestion_usuarios": ["useradd", "usermod", "userdel"],
+        "gestion_grupos": ["groupadd", "groupmod", "groupdel"],
+        "otros": ["passwd", "chage", "su", "newgrp", "chown", "chmod", "umask"]
+      },
+      "permisos": {
+        "basicos": {
+          "r": "Lectura",
+          "w": "Escritura",
+          "x": "Ejecución"
+        },
+        "especiales": {
+          "s": "SUID/SGID: ejecuta con permisos del propietario o grupo.",
+          "t": "Sticky bit: solo el dueño puede borrar archivos del directorio."
+        }
+      }
+    },
+    "9_comandos_basicos_linux": {
+      "navegacion": {
+        "cd": "Cambia de directorio",
+        "pwd": "Muestra el directorio actual",
+        "ls": "Lista archivos y carpetas"
+      },
+      "usuarios": {
+        "whoami": "Muestra el usuario actual",
+        "id": "Muestra UID y GID",
+        "su": "Cambia a otro usuario (como root)"
+      },
+      "archivos": {
+        "cp": "Copia archivos",
+        "mv": "Mueve o renombra",
+        "rm": "Borra archivos",
+        "touch": "Crea archivos vacíos"
+      },
+      "permisos": {
+        "chmod": "Cambia permisos",
+        "chown": "Cambia propietario",
+        "chgrp": "Cambia grupo"
+      },
+      "ayuda": {
+        "man": "Manual de comandos",
+        "help": "Ayuda rápida",
+        "whatis": "Breve descripción de una orden",
+        "apropos": "Busca comandos relacionados",
+        "info": "Documentación extensa estilo guía"
+      }
+    },
+    "10_dispositivos_mantenimiento": {
+      "tipos": ["IDE", "SCSI", "USB", "CD/DVD"],
+      "nombres_dispositivos": {
+        "IDE": "/dev/hda, /dev/hdb",
+        "SCSI/SATA": "/dev/sda, /dev/sdb",
+        "USB": "/dev/sdc",
+        "CD/DVD": "/dev/cdrom"
+      },
+      "particiones": {
+        "MBR": "Máximo 4 particiones primarias, una puede ser extendida",
+        "GPT": "Permite hasta 128 particiones modernas"
+      },
+      "comandos_utiles": {
+        "mount": "Montar un dispositivo",
+        "umount": "Desmontarlo",
+        "df": "Ver uso del disco",
+        "fdisk": "Gestionar particiones"
+      }
+    },
+    "11_backups": {
+      "compresion": ["gzip", "bzip2", "zip"],
+      "copias": {
+        "tar": "Agrupa archivos en uno solo (comprimido o no)",
+        "gzip/gunzip": "Comprime y descomprime .gz",
+        "bzip2/bunzip2": "Igual pero más lento y eficiente",
+        "zip/unzip": "Muy común en Windows"
+      }
+    }
+  }
+}
